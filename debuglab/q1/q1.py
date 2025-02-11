@@ -1,6 +1,8 @@
 from mrjob.job import MRJob   
 
 class UninformativeClassName(MRJob):  
+    """ this is a docstring """
+
     def mapper(self, key, line): 
         """ 
         This mapper expects the following information as input:
