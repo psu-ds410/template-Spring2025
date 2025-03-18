@@ -33,7 +33,7 @@ object WordCount {  // all code must be inside an object or class
   def doWordCount(input: RDD[String]) = { // the interesting stuff happens here
     // it is a separate function so we can test it out
     // the input is an rdd, so we can swap in the testing or big data rdd
-    val words = input.flatMap(_.split("\\W+")) //split by whitespace
+    val words = input.flatMap(_.split("\\s+")) //split by whitespace
     val noblank = words.filter(x => x.size > 0)
     val kv = noblank.map(word => (word,1L))
     val counts = kv.reduceByKey((x,y) => x+y)
