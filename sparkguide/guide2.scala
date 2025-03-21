@@ -44,4 +44,12 @@
  * the code. Using the spark (not scala) slides, run the code.
  * It will save the result in hdfs in a folder called "result"
  * Using HDFS commands, check out a few lines of this output.
+ * 
+ * Note 1: you will need to add a build.sbt file. 
+ * Note 2: you will need to exclude guide1.scala from compilation 
+ *    since it is not supposed to be compiled. To do this,
+ *    add the following line at the end of build.sbt:
+
+unmanagedSources / excludeFilter  ~= { _ || "guide1.scala" }
+
  */
