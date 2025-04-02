@@ -4,10 +4,12 @@ def what_would_partitioner_do(idname, key, numreducers):
     """ This function tells us what the partitioner would do in our 
     hypothetical setup for tracing through a mapreduce program.
 
-    Suppose your psu id is abc1234, the number of reducers is 4 and you
+    Suppose your email associated with gradescope is abc1234@psu.edu, 
+    then the idname is the part before the @ (i.e., idname is abc123).
+    Suppose the number of reducers is 4 and you
     want to know which reducers will be assigned to the keys "hello", "world", and 3
     Then you would call this function like this:
-    
+
     what_would_partitioner_do("abc1234", "hi", 4) # returns 1 (i.e. it will go to reducer 1)
     what_would_partitioner_do("abc1234", "worlds", 4)  #returns 1
     what_would_partitioner_do("abc1234", 5, 4)  # returns 3
