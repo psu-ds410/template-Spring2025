@@ -17,7 +17,7 @@ object Q1 {
     }
 
     def registerZipCounter(spark: SparkSession) = {
-        val zipCounter = udf({x: String => Option(x) match {case Some(y) => y.split(" ").size; case None => 0}})
+        val zipCounter = udf({x: String => Option(x) match {case Some(y) => y.split("\\s+").size; case None => 0}})
         spark.udf.register("zipCounter", zipCounter) // registers udf with the spark session
     }
 
