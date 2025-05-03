@@ -14,7 +14,7 @@ object RDDFinal {
     }
 
     def getRDD(sc:SparkContext): RDD[String] = { // get the orders rdd
-         
+        sc.textFile("/datasets/orders/orders*")
     }
 
     def doFinal(input: RDD[String]): RDD[(String, Double)] = {
