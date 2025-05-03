@@ -13,11 +13,11 @@ object RDDFinal {
 
     }
 
-    def getRDD(sc:SparkContext): RDD[String] = { // get the big data rdd
+    def getRDD(sc:SparkContext): RDD[String] = { // get the orders rdd
          
     }
 
-    def doFinal(input: RDD[String]): RDD[(String, (Int, Int))] = {
+    def doFinal(input: RDD[String]): RDD[(String, Double)] = {
 
     }
    
@@ -25,11 +25,11 @@ object RDDFinal {
 
     }
 
-    def expectedOutput(sc: SparkContext): RDD[(String, (Int, Int))] = {
+    def expectedOutput(sc: SparkContext): RDD[(String, Double)] = {
 
     }
 
-    def saveit(myrdd: RDD[(String, (Int, Int))], name: String) = {
+    def saveit(myrdd: RDD[(String, Double)], name: String) = {
         myrdd.saveAsTextFile(name)
     }
 
