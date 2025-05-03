@@ -21,6 +21,7 @@ object RDDFinal {
        // don't forget: in scala, if you divide two ints, you get an int back
        // if you want a double, you have to convert one of the ints to a double before dividing
 
+       // also instead of doing .split("\t"), use .split("\t", -1) so that the customer with blank id is not dropped
     }
    
     def getTestRDD(sc: SparkContext): RDD[String] = {
