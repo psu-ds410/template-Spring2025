@@ -18,6 +18,8 @@ object RDDFinal {
     }
 
     def doFinal(input: RDD[String]): RDD[(String, Double)] = {
+       // don't forget: in scala, if you divide two ints, you get an int back
+       // if you want a double, you have to convert one of the ints to a double before dividing
 
     }
    
