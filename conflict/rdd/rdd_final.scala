@@ -19,6 +19,7 @@ object RDDFinal {
 
     def doFinal(input: RDD[String]): RDD[(String, Double)] = {
         //make sure to use split("\t", -1) so that it behaves like the python function split("\t")
+        // in scala, dividing two ints gives you an int, so convert one to a float right before division
     }
    
     def getTestRDD(sc: SparkContext): RDD[String] = {
