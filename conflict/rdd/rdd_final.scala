@@ -19,7 +19,6 @@ object RDDFinal {
 
     def doFinal(input: RDD[String]): RDD[(String, Double)] = {
         //make sure to use split("\t", -1) so that it behaves like the python function split("\t")
-
     }
    
     def getTestRDD(sc: SparkContext): RDD[String] = {
